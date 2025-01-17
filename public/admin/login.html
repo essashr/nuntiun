@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="pt-br">
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+    <div class="page">
+        <div class="login">
+            <div class="wraper">
+                <form id="login-form" action="javascript:void(0);">
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <input type="email" placeholder="E-mail" id="email" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Senha" id="password" required>
+                        <i class='bx bxs-lock-alt' id="toggle-password"></i>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <span id="error-message" class="error-message hidden">E-mail ou senha inválidos</span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="../js/login.js" type="module"></script>
+</body>
+</html>

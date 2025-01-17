@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Editor de Notícias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" />
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="news">
+                        <h1>Editor de Notícias</h1>
+                        <div id="newsWrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="javascript:void(0);">
+            <button type="submit" class="log-out bx bx-log-out" id="uiLogOut" onclick="logOut()"></button>
+            <a href="login.html" class="back bx bx-arrow-back"></a>
+            <button type="button" class="create-news bx bx-news" id="createNewsButton" onclick="openNewsEditor()"></button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script src="../js/listNews.js" type="module"></script>
+    <script src="../js/newsSubmit.js" type="module"></script>
+</body>
+
+</html>

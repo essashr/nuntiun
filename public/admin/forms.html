@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="pt-br">
+
+<head>
+    <title>Formulários</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wrapper">
+                        <h1>Formulários</h1>
+                        <div id="contactsWrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="javascript:void(0);">
+            <button type="submit" class="log-out bx bx-log-out" id="uiLogOut" onclick="logOut()"></button>
+            <a href="login.html" class="back bx bx-arrow-back"></a>
+            <button type="button" class="edit-find bx bx-search" id="searchButton" onclick="openSearch()"></button>
+            <button type="submit" class="edit-add bx bx-plus" id="addColumnBtn" onclick="addNewColumn()"></button>
+        </form>
+    </div>
+    <script src="../js/forms.js" type="module"></script>
+</body>
+</html>
