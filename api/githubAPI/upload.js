@@ -4,7 +4,7 @@ const upload = multer();
 
 module.exports = async (req, res) => {
     const githubToken = process.env.GITHUB_TOKEN;
-    const branch = 'main';
+    const branch = 'images';
     if (!githubToken) {
         const errorMessage = 'Token do GitHub não configurado';
         console.error(errorMessage);

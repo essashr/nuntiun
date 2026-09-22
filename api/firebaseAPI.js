@@ -8,6 +8,7 @@ module.exports = (req, res) => {
         messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
         appId: process.env.FIREBASE_APP_ID,
         measurementId: process.env.FIREBASE_MEASUREMENT_ID,
+        recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
     };
 
     res.status(200).json(firebaseConfig);

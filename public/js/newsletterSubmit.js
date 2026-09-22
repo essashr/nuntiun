@@ -81,16 +81,12 @@ form.addEventListener('submit', async (event) => {
         try {
             const contactsRef = ref(db, 'Notícias');
             await push(contactsRef, newContact);
-            const response = await fetch('/api/emailAPI', {
+            const response = await fetch('/api/newsletterAPI', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    emailContent: '<h2>Obrigado por se inscrever na nossa newsletter!</h2><p>Estamos muito felizes em tê-lo conosco. A partir de agora, você receberá atualizações e novidades diretamente no seu e-mail.</p><p>Prepare-se para receber conteúdos incríveis que preparamos especialmente para você. Fique atento aos nossos próximos envios!</p><p>Se tiver alguma dúvida ou sugestão, não hesite em entrar em <a href="https://nuntiun.vercel.app/contacts.html">contato</a> conosco.</p><p>Atenciosamente,<br>A Equipe Nuntiun</p>',
-                    recipients: [email],
-                    emailSubject: 'Inscrição Newsletter Nuntiun'
-                })
+                body: JSON.stringify({ email })
             });
 
             const result = await response.json();

@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 module.exports = async (req, res) => {
     const githubToken = process.env.GITHUB_TOKEN;
-    const branch = 'main';
+    const branch = 'images';
 
     if (!githubToken) {
         return res.status(500).json({ error: 'Token do GitHub não configurado' });
@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
 
     const imageName = imageUrl.split('/').pop();
     try {
-        const sha = await getSha(imageName);
+        const sha = await getSha(imageName, branch);
         const response = await fetch(`https://api.github.com/repos/Essashr/nuntiun/contents/images/${imageName}`, {
             method: 'DELETE',
             headers: {
@@ -41,9 +41,9 @@ module.exports = async (req, res) => {
     }
 };
 
-async function getSha(imageName) {
+async function getSha(imageName, branch) {
     const githubToken = process.env.GITHUB_TOKEN;
-    const response = await fetch(`https://api.github.com/repos/Essashr/nuntiun/contents/images/${imageName}`, {
+    const response = await fetch(`https://api.github.com/repos/Essashr/nuntiun/contents/images/${imageName}?ref=${branch}`, {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${githubToken}`,
